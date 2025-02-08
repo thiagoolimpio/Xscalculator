@@ -1,3 +1,5 @@
+window.alert('Bem vindo á calculadora de IMC, coloque a altura e o peso corretamente. utilize virgula no campo de altura. Ex: 1.70');
+
 const calcular = document.getElementById('calcular');
 
 function imc () {
@@ -29,7 +31,7 @@ function imc () {
         resultado.textContent = `${nome} seu IMC é ${valorIMC} e você está ${classificacao}`;
         
     }else {
-        resultado.textContent = 'Preencha os campos em branco..';
+        resultado.textContent = 'para ver o resultado preencha os campos em branco..';
     }
 
 }
