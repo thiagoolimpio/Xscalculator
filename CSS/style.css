@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(49, 49, 49);
+    background-color: rgba(0, 0, 0, 0.925);
     overflow: hidden;
     height: 100%;
 }
@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #3838381e;
+    background-color: #14141488;
     padding-left: 50px;
     padding: 50px;
     padding-top: 0px;
@@ -41,7 +41,7 @@ input:focus{
     border: none;
 }
 button{
-    background-color: rgba(0, 0, 177, 0.479);
+    background-color:rgba(37, 37, 255, 0.719);
     border: none;
     color: rgb(201, 201, 201);
     width: 30%;
@@ -58,8 +58,8 @@ button{
     width: 300px;
     height: 150px;
     border-radius: 20px;
-    box-shadow: 0px, 0px, 10px, rgb(0, 0, 0);
-    background: #3f3f3f;
+    box-shadow: 0px, 0px, 10px, rgba(0, 0, 0, 0.829);
+    background: #1d1d1d;
     color: white;
     box-sizing: border-box;
     padding: 20px;
