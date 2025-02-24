@@ -1,5 +1,7 @@
+// alerta para usar .
 window.alert('Bem vindo á calculadora de IMC, coloque a altura e o peso corretamente. Utilize virgula no campo de altura. Ex: 1.70 e obtenha o seu indice de massa corporal ');
 
+// corpo do codigo 
 const calcular = document.getElementById('calcular');
 
 function imc () {
@@ -35,5 +37,5 @@ function imc () {
     }
 
 }
-
+// fazer calcular
 calcular.addEventListener('click', imc);

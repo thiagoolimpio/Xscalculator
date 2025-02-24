@@ -1,7 +1,7 @@
-// Função para converter metro quadrado para metro cúbico
+// Função de converter metro quadrado para metro cúbico
 
 function converterMetroQuadradoParaCubico() {
-  // Obter os valores dos inputs
+  // pegar os valores dos inputs
   const a = parseFloat(document.getElementById('aInput').value);
   const b = parseFloat(document.getElementById('bInput').value);
   const c = parseFloat(document.getElementById('cInput').value);
@@ -20,6 +20,6 @@ function converterMetroQuadradoParaCubico() {
   resultado.innerHTML = `O volume em metro cúbico é: ${volumeCubico} m³`;
 }
 
-// Adicionar evento de clique ao botão de conversão
+// fazer calcular
 const botaoConverter = document.getElementById('calcular');
 botaoConverter.addEventListener('click', converterMetroQuadradoParaCubico);
