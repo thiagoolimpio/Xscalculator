@@ -1,0 +1,86 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+
+const CalculadoraIMC = () => {
+  const [altura, setAltura] = useState('');
+  const [peso, setPeso] = useState('');
+  const [imc, setIMC] = useState('');
+  const [resultado, setResultado] = useState('');
+
+  const calcularIMC = () => {
+    const alturaEmMetros = parseFloat(altura) / 100;
+    const imc = parseFloat(peso) / (alturaEmMetros * alturaEmMetros);
+    setIMC(imc.toFixed(2));
+
+    if (imc < 18.5) {
+      setResultado('Magreza');
+    } else if (imc < 25) {
+      setResultado('Normal');
+    } else if (imc < 30) {
+      setResultado('Sobrepeso');
+    } else if (imc < 35) {
+      setResultado('Obesidade Grau I');
+    } else if (imc < 40) {
+      setResultado('Obesidade Grau II');
+    } else {
+      setResultado('Obesidade Grau III');
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Calculadora de IMC</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Altura (cm)"
+        placeholderTextColor={'white'}
+        value={altura}
+        onChangeText={(text) => setAltura(text)}
+        keyboardType="numeric"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Peso (kg)"
+        placeholderTextColor={'white'}
+        value={peso}
+        onChangeText={(text) => setPeso(text)}
+        keyboardType="numeric"
+      />
+      <Button title="Calcular IMC" onPress={calcularIMC} />
+      <Text style={styles.resultado}>Imc: {imc}</Text>
+      <Text style={styles.resultado}>Resultado: {resultado}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    width: '100%',
+    height: 60,
+    borderColor: 'gray',
+    borderWidth: 4,
+    padding: 10,
+    marginBottom: 20,
+    color: 'white',
+    borderRadius: 15,
+  },
+  resultado: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: 'white',
+  },
+});
+
+export default CalculadoraIMC;
