@@ -69,3 +69,23 @@ button {
 button:hover {
   background-color: rgb(12, 12, 124);
 }
+a {
+  color: rgba(255, 255, 255, 0.678);
+  font-size: 15px;
+  background-color: rgba(37, 37, 255, 0.719);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+a:hover {
+  background-color: rgb(12, 12, 124);
+  color: rgba(255, 255, 255, 0.678);
+}
